@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banners",
+  "info": {
+    "singularName": "banner",
+    "pluralName": "banners",
+    "displayName": "banner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bannerurl": {
+      "type": "string",
+      "required": true
+    },
+    "targeturl": {
+      "type": "string",
+      "required": true
+    },
+    "targetHomepage": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

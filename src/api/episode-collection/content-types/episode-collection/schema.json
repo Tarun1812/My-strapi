@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "episode_collections",
+  "info": {
+    "singularName": "episode-collection",
+    "pluralName": "episode-collections",
+    "displayName": "Episode Collection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "course_collection": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course-collection.course-collection",
+      "inversedBy": "episode_collections"
+    },
+    "episodevideo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "episodethumbnail": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Episodeduration": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
